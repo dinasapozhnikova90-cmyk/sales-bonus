@@ -52,11 +52,11 @@ function analyzeSalesData(data, options) {
         record.items.forEach(item => {
             const product = productIndex[item.sku];             
             if (seller && product) {
-                const cost = product.purchase_price * item.quantity;
-                const revenue = calculateRevenue(item, product);
-                const itemProfit = revenue - cost;
-                seller.revenue += revenue;
-                seller.profit += itemProfit;
+                const cost = +(product.purchase_price * item.quantity).toFixed(2);
+                const revenue = +calculateRevenue(item, product).toFixed(2);
+                const itemProfit = +(revenue - cost).toFixed(2);
+                seller.revenue = +(seller.revenue + revenue).toFixed(2);;
+                seller.profit = +(seller.profit + itemProfit).toFixed(2);;
 
                 if (!seller.products_sold[item.sku]) {
                     seller.products_sold[item.sku] = 0;
