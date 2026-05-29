@@ -1,3 +1,5 @@
+https://github.com/dinasapozhnikova90-cmyk/sales-bonus.git
+
 # Проектная работа "Пряники"
 5 спринт, модуль JS
 

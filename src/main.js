@@ -79,6 +79,7 @@ function analyzeSalesData(data, options) {
     });
 
     return sellerStats.map(seller => ({
+        id: seller.id,
         seller_id: seller.id,
         name: seller.name,
         revenue: +seller.revenue.toFixed(2),
